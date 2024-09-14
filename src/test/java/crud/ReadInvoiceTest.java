@@ -22,8 +22,6 @@ public class ReadInvoiceTest extends BaseTests {
     public void testViewInvoice() {
         int invoiceIndex = 0; // View the first invoice
         mainPage.viewInvoice(invoiceIndex);
-        // Add assertions here to verify that the invoice details page is loaded
-        // This might involve creating a new Page Object for the invoice details page
-        // and verifying that certain elements are present
+
     }
 }

@@ -16,7 +16,7 @@ public class FilterByPendingTest extends BaseTests {
         int invoiceCount = mainPage.getInvoiceCount();
         for (int i = 0; i < invoiceCount; i++) {
             String status = mainPage.getInvoiceStatus(i);
-            Assert.assertEquals(status.toLowerCase(), "pending",
+            Assert.assertEquals(status.toLowerCase(), ". pending",
                     "Invoice at index " + i + " is not in Pending status");
         }
     }

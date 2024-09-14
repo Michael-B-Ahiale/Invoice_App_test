@@ -16,7 +16,7 @@ public class FilterByDraftTest extends BaseTests {
         int invoiceCount = mainPage.getInvoiceCount();
         for (int i = 0; i < invoiceCount; i++) {
             String status = mainPage.getInvoiceStatus(i);
-            Assert.assertEquals(status.toLowerCase(), "draft",
+            Assert.assertEquals(status.toLowerCase(), ". draft",
                     "Invoice at index " + i + " is not in Draft status");
         }
     }

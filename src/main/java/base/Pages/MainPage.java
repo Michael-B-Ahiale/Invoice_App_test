@@ -37,6 +37,7 @@ public class MainPage {
         if (index >= 0 && index < items.size()) {
             items.get(index).click();
             return new Page_ViewInvoice(driver);
+
         } else {
             throw new IndexOutOfBoundsException("Invalid invoice index");
         }
@@ -82,6 +83,10 @@ public class MainPage {
         }
     }
 
+    public String getInvoiceId(int index) {
+        return driver.findElement(invoiceId).getText();
+
+    }
     public boolean isInvoiceItemsPresent() {
         return !driver.findElements(invoiceItems).isEmpty();
     }
