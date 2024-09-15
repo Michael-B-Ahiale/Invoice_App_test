@@ -11,6 +11,7 @@ public class Page_ViewInvoice {
     private WebDriver driver;
     private WebDriverWait wait;
     private By deleteInvoiceButton = By.cssSelector("button.btn-danger");
+    private By editInvoiceButton = By.cssSelector("button.btn-edit");
 
 
     public Page_ViewInvoice(WebDriver driver) {
@@ -21,4 +22,15 @@ public class Page_ViewInvoice {
     public void deleteInvoice() {
         wait.until(ExpectedConditions.elementToBeClickable(deleteInvoiceButton)).click();
     }
+
+    public Page_EditInvoice editInvoice(){
+        wait.until(ExpectedConditions.elementToBeClickable(editInvoiceButton)).click();
+        return new Page_EditInvoice(driver);
+    }
+
+    public void markAsPending(){
+
+    }
+
+
 }
